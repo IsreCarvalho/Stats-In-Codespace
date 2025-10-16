@@ -22,5 +22,6 @@
     }
   },
   "forwardPorts": [8888],
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "postCreateCommand": "mkdir -p ~/R/library && echo 'R_LIBS_USER=\"~/R/library\"' >> ~/.Renviron && Rscript -e \"install.packages(c('ggplot2','dplyr','tidyr'), repos='https://cloud.r-project.org')\""
 }
